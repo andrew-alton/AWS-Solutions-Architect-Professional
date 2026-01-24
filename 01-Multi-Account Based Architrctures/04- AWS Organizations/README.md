@@ -92,10 +92,14 @@ use to manage permissions within your AWS organization accounts.
 </div>
 
 ## Point to Note - SCPs
-SCPs don't affect users or roles in the management account.
-They affect only the member accounts in your organization.
-SCPs do not grant permissions to the IAM users and IAM roles in your
-organization. No permissions are granted by an SCP.
+- SCPs don't affect users or roles in the management account.
+
+- They affect only the member accounts in your organization.
+  
+- SCPs do not grant permissions to the IAM users and IAM roles in yourorganization.
+
+- No permissions are granted by an SCP.
+
 
 ## Example - Tag Policies
 Tag policies allow you to standardize the tags attached to the AWS resources
