@@ -26,5 +26,5 @@ You can create multiple OUs within a single organization, and you can create
 OUs within other OUs.
 
 <div align="center">
-<img src="images/image2.png" alt="IAM Policies" width="600">
+<img src="images/image3.png" alt="IAM Policies" width="600">
 </div>
