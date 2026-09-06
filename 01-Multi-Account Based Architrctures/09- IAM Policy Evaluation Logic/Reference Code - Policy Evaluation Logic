@@ -1,0 +1,81 @@
+## Example 1 Policy : S3 Full Access
+
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "S3FulLAccess",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "*"
+        }
+    ]
+}
+ 
+
+
+## Example 2 Policy: Explicit Deny on S3
+
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "DenyS3Access",
+            "Effect": "Deny",
+            "Action": "s3:*",
+            "Resource": "*"
+        }
+    ]
+}
+ 
+
+
+## Example 3 Policy Policy: Allow IAM User on S3 Bucket Policy
+
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::042025557788:user/kplabs-video-user"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::demo-user-sample-bucket/*"
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::042025557788:user/kplabs-video-user"
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::demo-user-sample-bucket"
+        }
+    ]
+}
+ 
+
+
+## Example 4 Policy Policy: Deny IAM User on S3 Bucket Policy
+
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Principal": {
+                "AWS": "arn:aws:iam::042025557788:user/kplabs-video-user"
+            },
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::demo-user-sample-bucket/*"
+        }
+    ]
+}
