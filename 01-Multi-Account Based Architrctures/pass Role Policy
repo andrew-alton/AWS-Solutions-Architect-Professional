@@ -1,0 +1,20 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowReadOnlyAccessToRoles",
+      "Effect": "Allow",
+      "Action": [
+        "iam:ListRoles",
+        "iam:GetRole"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AllowPassSpecificRole",
+      "Effect": "Allow",
+      "Action": "iam:PassRole",
+      "Resource": "arn:aws:iam::472398091341:role/cloudformation-role"
+    }
+  ]
+}

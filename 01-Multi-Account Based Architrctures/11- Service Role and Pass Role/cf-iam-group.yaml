@@ -1,0 +1,5 @@
+Resources:
+  Demo:
+    Type: 'AWS::IAM::Group'
+    Properties:
+      GroupName: DemoGroup2
