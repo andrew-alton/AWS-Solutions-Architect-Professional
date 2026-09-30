@@ -1,0 +1,11 @@
+# The AMI ID in this template is based on the us-east-1 region. If you are practicing in a different region, then make sure yo change the AMI ID
+
+
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "EC2 instance for development."
+Resources: 
+  MyEC2Instance: 
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: "ami-0fef201115eefe936"
+      InstanceType: "t2.micro"

@@ -1,0 +1,20 @@
+{
+  "Id": "ExamplePolicy",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowSSLRequests",
+      "Action": "s3:GetObject",
+      "Effect": "Allow",
+      "Resource": [
+        "arn:aws:s3:::mykplabs-policy/*"
+      ],
+      "Condition": {
+        "Bool": {
+          "aws:SecureTransport": "true"
+        }
+      },
+      "Principal": "*"
+    }
+  ]
+}
