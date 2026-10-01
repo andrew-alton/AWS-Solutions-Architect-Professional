@@ -1,0 +1,7 @@
+Command to verify the ACL information of a specific object:
+
+## aws s3api get-object-acl --bucket mykplabs-central --key tmp-data.txt
+
+Command to upload object with specific ACL
+
+## aws s3 cp canned.txt s3://mykplabs-central/ --acl bucket-owner-full-control
