@@ -1,0 +1,24 @@
+{
+  "Version": "2012-10-17",
+  "Id": "PolicyForDestinationBucket",
+  "Statement": [
+    {
+      "Sid": "ReplicationPermissions",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::YOUR-ACCOUNT-ID-HERE:root"
+      },
+      "Action": [
+        "s3:ReplicateDelete",
+        "s3:ReplicateObject",
+        "s3:ObjectOwnerOverrideToBucketOwner",
+        "s3:GetBucketVersioning",
+        "s3:PutBucketVersioning"
+      ],
+      "Resource": [
+        "arn:aws:s3:::DESTINATION-BUCKET-NAME/*",
+        "arn:aws:s3:::DESTINATION-BUCKET-NAME"
+      ]
+    }
+  ]
+}
